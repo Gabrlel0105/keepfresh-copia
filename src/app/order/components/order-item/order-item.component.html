@@ -1,0 +1,25 @@
+<div class="order-card animate-fade-in">
+  <div class="order-header">
+    <h3>Table: {{ order.tableNumber }}</h3>
+    <span class="order-date">{{ order.createdAt | date:'short' }}</span>
+  </div>
+
+  <div class="order-content">
+    <h4>Dishes:</h4>
+    <ul class="dishes-list">
+      <li *ngFor="let item of order.items">
+        {{ item.dish.name }}
+        <span class="dish-price">S/. {{ item.dish.price }}</span>
+        <span *ngIf="item.quantity > 1" class="dish-quantity">x{{ item.quantity }}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="order-footer">
+    <div class="order-total">Total: S/. {{ order.total }}</div>
+    <div class="order-actions">
+      <button class="btn btn-secondary" (click)="onEdit()">Edit</button>
+      <button class="btn btn-danger" (click)="onRemove()">Remove</button>
+    </div>
+  </div>
+</div>
