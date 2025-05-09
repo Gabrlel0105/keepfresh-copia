@@ -1,15 +1,10 @@
 import { Component } from '@angular/core';
-import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
-import {TranslatePipe, TranslateService} from '@ngx-translate/core';
-import {
-  LanguageSwitcherComponentComponent
-} from './public/components/language-switcher.component/language-switcher.component.component';
-import {MatToolbar, MatToolbarRow} from '@angular/material/toolbar';
-import {MatAnchor} from '@angular/material/button';
+import {TranslateService} from '@ngx-translate/core';
+import {InventoryTable} from './inventory/components/inventory-table/inventory-table.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatToolbar, MatToolbarRow, MatAnchor, RouterLink, RouterLinkActive, TranslatePipe, LanguageSwitcherComponentComponent],
+  imports: [InventoryTable],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
