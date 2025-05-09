@@ -48,6 +48,19 @@
       "total": 175,
       "createdAt": "2025-05-09T03:17:46.480Z",
       "id": 3
+    },
+    {
+      "tableNumber": 2,
+      "items": [
+        {
+          "name": "Agua",
+          "quantity": 1,
+          "price": 3
+        }
+      ],
+      "total": 3,
+      "createdAt": "2025-05-09T15:23:46.395Z",
+      "id": 4
     }
   ],
   "dishes": [

@@ -1,23 +1,22 @@
-<!-- pages/order-form/order-form.component.html -->
 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="order-form">
-  <h2>Registrar Orden</h2>
+  <h2>Create new Order</h2>
 
   <div class="form-group">
-    <label for="tableNumber">Número de Mesa</label>
+    <label for="tableNumber">Table number</label>
     <input type="number" id="tableNumber" formControlName="tableNumber" />
   </div>
 
   <div formArrayName="items" class="items-group">
     <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i" class="item-row">
       <select formControlName="name">
-        <option value="" disabled selected>Selecciona un plato</option>
+        <option value="" disabled selected>Select a dish from menu</option>
         <option *ngFor="let dish of dishes" [value]="dish.name">{{ dish.name }}</option>
       </select>
       <input type="number" formControlName="quantity" min="1" />
-      <button type="button" class="remove-btn" (click)="removeItem(i)">Eliminar</button>
+      <button type="button" class="remove-btn" (click)="removeItem(i)">Remove</button>
     </div>
   </div>
 
-  <button type="button" class="add-btn" (click)="addItem()">Agregar Plato</button>
-  <button type="submit" class="submit-btn">Guardar Orden</button>
+  <button type="button" class="add-btn" (click)="addItem()">Add dish</button>
+  <button type="submit" class="submit-btn">Save order</button>
 </form>

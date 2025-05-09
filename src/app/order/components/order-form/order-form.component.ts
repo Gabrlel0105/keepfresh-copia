@@ -34,7 +34,7 @@ export class OrderFormComponent extends BaseFormComponent implements OnInit{
     });
 
     this.dishService.getAll().subscribe(dishes => this.dishes = dishes);
-    this.addItem(); // inicial
+    this.addItem();
   }
 
   get items(): FormArray {
@@ -77,10 +77,10 @@ export class OrderFormComponent extends BaseFormComponent implements OnInit{
     });
 
     this.orderService.create(order).subscribe(() => {
-      alert('Orden guardada con éxito');
+      alert('Successfully saved');
       this.form.reset();
       this.items.clear();
-      this.addItem(); // reiniciar
+      this.addItem();
     });
   }
 
