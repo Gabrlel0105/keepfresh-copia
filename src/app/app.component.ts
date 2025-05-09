@@ -6,6 +6,7 @@ import {InventoryTable} from './inventory/components/inventory-table/inventory-t
   selector: 'app-root',
   imports: [InventoryTable],
   templateUrl: './app.component.html',
+  standalone: true,
   styleUrl: './app.component.css'
 })
 export class AppComponent {
