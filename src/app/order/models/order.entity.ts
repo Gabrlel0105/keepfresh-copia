@@ -1,14 +1,13 @@
-import {Dish} from './dish.entity';
+import {DishItem} from './dish.entity';
 
-export interface OrderItem {
-  dish: Dish;
-  quantity: number;
-}
+export class Order {
+  id?: number;
+  tableNumber?: number;
+  items?: DishItem[];
+  total?: number;
+  createdAt?: string;
 
-export interface Order {
-  id: number;
-  tableNumber: number;
-  items: OrderItem[];
-  total: number;
-  createdAt: Date;
+  constructor(data: Partial<Order>) {
+    Object.assign(this, data);
+  }
 }
