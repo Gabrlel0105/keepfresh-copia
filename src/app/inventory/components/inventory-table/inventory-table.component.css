@@ -1,0 +1,38 @@
+.inventory-container{
+  display: flex;
+  font-family: Montserrat, Open Sans, serif;
+}
+
+.content{
+  flex:1;
+  padding: 40px;
+  background-color: white;
+}
+
+h1{
+  color: #28a745;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+td, th{
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
