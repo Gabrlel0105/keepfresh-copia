@@ -1,65 +1,23 @@
-<div class="order-form-container">
-  <div class="form-section">
-    <h2 class="section-title">ADD AN ORDER</h2>
+<!-- pages/order-form/order-form.component.html -->
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="order-form">
+  <h2>Registrar Orden</h2>
 
-    <form [formGroup]="orderForm" class="order-form">
-      <div class="form-group">
-        <label for="table-number">Table number</label>
-        <input
-          type="number"
-          id="table-number"
-          class="form-control"
-          formControlName="tableNumber"
-          min="1"
-        />
-        <div class="error-message" *ngIf="isInvalidControl(orderForm, 'tableNumber')">
-          {{ errorMessagesForControl(orderForm, 'tableNumber') }}
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="dish-select">Dishes</label>
-        <select
-          id="dish-select"
-          class="form-control"
-          formControlName="selectedDishId"
-        >
-          <option [value]="0">Select</option>
-          <option *ngFor="let dish of dishes" [value]="dish.id">
-            {{ dish.name }} - S/. {{ dish.price }}
-          </option>
-        </select>
-      </div>
-
-      <div class="order-items" *ngIf="orderItems.length > 0">
-        <h3>Selected Dishes:</h3>
-        <ul class="item-list">
-          <li *ngFor="let item of orderItems; let i = index" class="animate-fade-in">
-            {{ item.dish.name }} - S/. {{ item.dish.price }} x {{ item.quantity }}
-            <button class="btn-icon" (click)="removeItem(i)">✕</button>
-          </li>
-        </ul>
-        <div class="order-total">
-          Total: S/. {{ calculateTotal() }}
-        </div>
-      </div>
-
-      <div class="form-actions">
-        <button
-          class="btn btn-secondary"
-          (click)="addDish()"
-          [disabled]="!canAddDish()"
-        >
-          Add Dish
-        </button>
-        <button
-          class="btn btn-primary"
-          (click)="saveOrder()"
-          [disabled]="!orderForm.valid || orderItems.length === 0"
-        >
-          Save
-        </button>
-      </div>
-    </form>
+  <div class="form-group">
+    <label for="tableNumber">Número de Mesa</label>
+    <input type="number" id="tableNumber" formControlName="tableNumber" />
   </div>
-</div>
+
+  <div formArrayName="items" class="items-group">
+    <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i" class="item-row">
+      <select formControlName="name">
+        <option value="" disabled selected>Selecciona un plato</option>
+        <option *ngFor="let dish of dishes" [value]="dish.name">{{ dish.name }}</option>
+      </select>
+      <input type="number" formControlName="quantity" min="1" />
+      <button type="button" class="remove-btn" (click)="removeItem(i)">Eliminar</button>
+    </div>
+  </div>
+
+  <button type="button" class="add-btn" (click)="addItem()">Agregar Plato</button>
+  <button type="submit" class="submit-btn">Guardar Orden</button>
+</form>
