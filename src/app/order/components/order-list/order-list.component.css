@@ -1,0 +1,30 @@
+.order-list-container {
+  margin-top: 32px;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.no-orders {
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .orders-grid {
+    grid-template-columns: 1fr;
+  }
+}

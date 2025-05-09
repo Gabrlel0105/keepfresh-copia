@@ -1,0 +1,17 @@
+<div class="order-list-container">
+  <h2 class="section-title">ORDERS</h2>
+
+  <div class="orders-grid">
+    <div *ngFor="let order of orders">
+      <app-order-item
+        [order]="order"
+        (edit)="editOrder($event)"
+        (remove)="removeOrder($event)"
+      ></app-order-item>
+    </div>
+  </div>
+
+  <div *ngIf="orders.length === 0" class="no-orders">
+    No orders available. Create a new order to get started.
+  </div>
+</div>
