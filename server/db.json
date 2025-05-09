@@ -2,24 +2,6 @@
   "orders": [
     {
       "id": 1,
-      "tableNumber": 3,
-      "items": [
-        {
-          "name": "Pizza Margherita",
-          "quantity": 2,
-          "price": 25
-        },
-        {
-          "name": "Coca Cola",
-          "quantity": 2,
-          "price": 5
-        }
-      ],
-      "total": 60,
-      "createdAt": "2025-05-08T12:00:00Z"
-    },
-    {
-      "id": 2,
       "tableNumber": 5,
       "items": [
         {
@@ -40,31 +22,32 @@
       "tableNumber": 2,
       "items": [
         {
-          "dish": {
-            "id": 4,
-            "name": "Agua",
-            "price": 3
-          },
-          "quantity": 1
+          "name": "Ensalada César",
+          "quantity": 2,
+          "price": 20
+        },
+        {
+          "name": "Coca Cola",
+          "quantity": 1,
+          "price": 5
         }
       ],
-      "total": 3,
-      "id": 3
+      "total": 45,
+      "createdAt": "2025-05-09T03:13:07.096Z",
+      "id": 2
     },
     {
       "tableNumber": 6,
       "items": [
         {
-          "dish": {
-            "id": 1,
-            "name": "Pizza Margherita",
-            "price": 25
-          },
-          "quantity": 1
+          "name": "Pizza Margherita",
+          "quantity": 7,
+          "price": 25
         }
       ],
-      "total": 25,
-      "id": 4
+      "total": 175,
+      "createdAt": "2025-05-09T03:17:46.480Z",
+      "id": 3
     }
   ],
   "dishes": [
