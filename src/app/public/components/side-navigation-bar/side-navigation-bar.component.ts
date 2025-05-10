@@ -25,7 +25,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 export class SideNavigationBarComponent {
 
   sidenavItems: SideNavigationItem[] =[
-    { label: 'Orders', icon: 'order', route: 'orders'},
+    { label: 'Orders', icon: 'restaurant_menu', route: 'orders'},
     { label: 'Home', icon: 'home', route: 'home'}
   ];
 
