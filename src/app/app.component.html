@@ -1,9 +1,15 @@
-<h1>KeepItfresh</h1>
-<div class="home-container">
-  <app-order-form></app-order-form>
-</div>
-<div>
-  <span>
-      <app-orders></app-orders>
-  </span>
-</div>
+<mat-sidenav-container class="app-container">
+  <mat-sidenav
+    #sidenav
+    [mode]="mobileView ? 'over' : 'side'"
+    [opened]="!mobileView"
+    class="sidenav">
+    <app-side-navigation-bar></app-side-navigation-bar>
+  </mat-sidenav>
+  <mat-sidenav-content class="content-container">
+    <app-toolbar (menuToggled)="sidenav.toggle()"></app-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

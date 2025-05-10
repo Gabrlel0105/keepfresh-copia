@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import {OrderListComponent} from '../../../order/components/order-list/order-list.component';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-home',
   imports: [
-    OrderListComponent
+    CommonModule,
   ],
   templateUrl: './home.component.html',
   standalone: true,

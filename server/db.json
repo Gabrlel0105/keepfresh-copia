@@ -92,6 +92,37 @@
       "total": 11,
       "createdAt": "2025-05-09T17:21:49.829Z",
       "id": 6
+    },
+    {
+      "tableNumber": 10,
+      "items": [
+        {
+          "name": "Spaghetti Carbonara",
+          "quantity": 1,
+          "price": 35
+        },
+        {
+          "name": "Pizza Margherita",
+          "quantity": 1,
+          "price": 25
+        }
+      ],
+      "total": 60,
+      "createdAt": "2025-05-10T03:31:22.472Z",
+      "id": 7
+    },
+    {
+      "tableNumber": 27,
+      "items": [
+        {
+          "name": "Agua",
+          "quantity": 1,
+          "price": 3
+        }
+      ],
+      "total": 3,
+      "createdAt": "2025-05-10T03:34:14.512Z",
+      "id": 8
     }
   ],
   "dishes": [
