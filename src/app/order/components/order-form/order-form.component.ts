@@ -5,12 +5,13 @@ import {Dish} from '../../models/dish.entity';
 import {Order} from '../../models/order.entity';
 import {OrderService} from '../../services/order.service';
 import {DishService} from '../../services/dish.service';
-import {NgForOf, NgIf} from '@angular/common';
+import {CommonModule, NgForOf, NgIf} from '@angular/common';
 
 
 @Component({
   selector: 'app-order-form',
   imports: [
+    CommonModule,
     NgForOf,
     ReactiveFormsModule,
     FormsModule
