@@ -1,0 +1,27 @@
+mat-toolbar {
+  background-color: white;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.toolbar-title {
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.menu-button {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
