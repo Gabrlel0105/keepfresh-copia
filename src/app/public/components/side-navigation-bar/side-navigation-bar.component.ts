@@ -26,10 +26,8 @@ export class SideNavigationBarComponent {
 
   sidenavItems: SideNavigationItem[] =[
     { label: 'Orders', icon: 'restaurant_menu', route: 'orders'},
-    { label: 'Home', icon: 'home', route: 'home'}
+    { label: 'Home', icon: 'home', route: 'home'},
+    { label: 'Inventory', icon: 'inventory_2', route: 'products'},
   ];
-
-
-
 
 }

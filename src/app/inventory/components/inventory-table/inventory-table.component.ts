@@ -12,6 +12,7 @@ import {FormsModule} from '@angular/forms';
     NgIf
   ],
   templateUrl: './inventory-table.component.html',
+  standalone: true,
   styleUrl: './inventory-table.component.css'
 })
 export class InventoryTable implements OnInit {
