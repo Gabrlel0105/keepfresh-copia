@@ -61,6 +61,37 @@
       "total": 3,
       "createdAt": "2025-05-09T15:23:46.395Z",
       "id": 4
+    },
+    {
+      "tableNumber": 8,
+      "items": [
+        {
+          "name": "Pizza Margherita",
+          "quantity": 5,
+          "price": 25
+        }
+      ],
+      "total": 125,
+      "createdAt": "2025-05-09T16:37:05.015Z",
+      "id": 5
+    },
+    {
+      "tableNumber": 10,
+      "items": [
+        {
+          "name": "Coca Cola",
+          "quantity": 1,
+          "price": 5
+        },
+        {
+          "name": "Agua",
+          "quantity": 2,
+          "price": 3
+        }
+      ],
+      "total": 11,
+      "createdAt": "2025-05-09T17:21:49.829Z",
+      "id": 6
     }
   ],
   "dishes": [
