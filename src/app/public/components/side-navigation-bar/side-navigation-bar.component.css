@@ -1,0 +1,56 @@
+.sidenav-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #2E7D32;
+  color: white;
+}
+
+.sidenav-header {
+  padding: 16px;
+  margin-bottom: 8px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.nav-item {
+  color: white;
+  margin: 4px 0;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-icon {
+  margin-right: 16px;
+}
+
+.active-link {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidenav-footer {
+  margin-top: auto;
+  padding: 16px;
+}
+
+.logout-item {
+  color: white;
+  cursor: pointer;
+}
+
+mat-nav-list {
+  padding-top: 0;
+}
+
+::ng-deep .mat-mdc-list-item-unscoped-content {
+  display: flex;
+  align-items: center;
+}
