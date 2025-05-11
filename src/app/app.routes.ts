@@ -8,6 +8,8 @@ import {RegisterOwnerComponent} from './public/pages/login/register-user/registe
 import {ValidationComponent} from './public/pages/login/validation/validation.component';
 const PageNotFoundComponent = ()=> import('./public/pages/page-not-found/page-not-found.component').then(m => m.PageNotFoundComponent);
 import {RegisterWorkerComponent} from './public/pages/login/register-user/register-worker/register-worker.component';
+import {RestoreOwnerComponent} from 'public/pages/login/restore-owner/restore-owner.component'
+import {RestoreWorkerComponent} from './public/pages/login/restore-worker/restore-worker.component';
 
 export const routes: Routes = [
   {path : 'login-owner', component: LoginOwnerComponent},
@@ -18,8 +20,11 @@ export const routes: Routes = [
   {path :"register-owner", component: RegisterOwnerComponent},
   {path:"register-worker", component: RegisterWorkerComponent},
   {path:"recover-password-worker", component: RecoverPasswordWorkerComponent},
+  {path:"restore-owner", component: RestoreOwnerComponent},
+  {path:"restore-worker", component: RestoreWorkerComponent},
   {path:"recover-password-owner", component: RecoverPasswordOwnerComponent},
   {path:"validation", component: ValidationComponent},
+
   { path: '', redirectTo: 'login-owner', pathMatch: 'full' },
   { path: '**', loadComponent: PageNotFoundComponent }
 ];
