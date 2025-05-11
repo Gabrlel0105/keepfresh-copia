@@ -1,0 +1,57 @@
+import { Component } from '@angular/core';
+import {RegisterOwnerService} from "../../../../services/register-owner.service";
+
+import {Router, RouterLink} from "@angular/router";
+import {MatButton} from '@angular/material/button';
+import {FormsModule} from '@angular/forms';
+import {MatInput, MatLabel} from '@angular/material/input';
+import {MatToolbar} from '@angular/material/toolbar';
+import {MatCard, MatCardContent} from '@angular/material/card';
+import {MatFormField} from '@angular/material/form-field';
+
+@Component({
+  selector: 'app-register-owner',
+  templateUrl: './register-owner.component.html',
+  imports: [
+    MatToolbar,
+    MatCard,
+    MatCardContent,
+    MatButton,
+    RouterLink,
+    MatLabel,
+    MatLabel,
+    MatLabel,
+    MatLabel,
+    MatLabel,
+    MatLabel,
+    MatLabel,
+    MatFormField,
+    MatLabel,
+    MatInput,
+    FormsModule,
+  ],
+  styleUrls: ['./register-owner.component.css']
+})
+export class RegisterOwnerComponent {
+
+  user = {email: '', password: '',lastName:'',firstName:'',birthDate:'',phoneNumber:'' };
+  profile = {imageUrl:'https://imgur.com/YP2XnZT.png',ownerId:0};
+
+  constructor(private userService: RegisterOwnerService, private router: Router) {}
+  onSubmit() {
+    this.userService.addUser(this.user).subscribe((data:any) => {
+      console.log('Usuario creado:', data);
+      this.user = {email: '', password: '',lastName:'',firstName:'',birthDate:'',phoneNumber:'' };
+      this.userService.setCurrentUserId(data.id);
+      const ownerId = data.id;
+      if (ownerId !== null) {
+        this.profile.ownerId = ownerId;
+        this.userService.addimageprofile(this.profile).subscribe((data: any) => {
+          console.log('Imagen de Perfil creada:', data.id);
+        });
+      } else {
+        console.error('Error: ownerId es nulo');
+      }
+    });
+  }
+}

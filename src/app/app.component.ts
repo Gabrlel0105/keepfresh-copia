@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router'; // IMPORTANTE
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  templateUrl: './app.component.html',
   standalone: true,
-  styleUrl: './app.component.css'
+  imports: [RouterModule], // ← IMPORTANTE para usar <router-outlet>
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'KeepItFresh';
+  title = 'Frontend-Web-Application';
 
 }

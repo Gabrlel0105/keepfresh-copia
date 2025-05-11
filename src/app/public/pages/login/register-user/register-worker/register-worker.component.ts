@@ -1,0 +1,76 @@
+import { Component } from '@angular/core';
+import { RegisterWorkerService } from '../../../../services/register-worker.service';
+import {Router, RouterLink} from '@angular/router';
+import {MatButton} from '@angular/material/button';
+import {MatInput, MatLabel} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
+import {MatToolbar} from '@angular/material/toolbar';
+import {MatCard, MatCardContent} from '@angular/material/card';
+import {MatFormField} from '@angular/material/form-field';
+
+@Component({
+  selector: 'app-register-worker',
+  templateUrl: './register-worker.component.html',
+  imports: [
+    MatToolbar,
+    MatCard,
+    MatCardContent,
+    MatButton,
+    RouterLink,
+    MatLabel,
+    MatLabel,
+    MatLabel,
+    MatLabel,
+    MatLabel,
+    MatLabel,
+    MatLabel,
+    MatFormField,
+    MatLabel,
+    MatInput,
+    FormsModule,
+  ],
+  styleUrls: ['./register-worker.component.css']
+})
+export class RegisterWorkerComponent {
+  user = {
+    email: '',
+    password: '',
+    lastName: '',
+    firstName: '',
+    birthDate: '',
+    phoneNumber: ''
+  };
+
+  profile = {
+    imageUrl: 'https://imgur.com/YP2XnZT.png',
+    workerId: 0
+  };
+
+  constructor(private userService: RegisterWorkerService, private router: Router) {}
+
+  onSubmit() {
+    this.userService.addUserWorker(this.user).subscribe((data: any) => {
+      console.log('Usuario creado:', data);
+      this.user = {
+        email: '',
+        password: '',
+        lastName: '',
+        firstName: '',
+        birthDate: '',
+        phoneNumber: ''
+      };
+
+      this.userService.setCurrentUserId(data.id);
+      const workerId = data.id;
+
+      if (workerId !== null) {
+        this.profile.workerId = workerId;
+        this.userService.addImageProfile(this.profile).subscribe((data: any) => {
+          console.log('Imagen de Perfil creada:', data.id);
+        });
+      } else {
+        console.error('Error: workerId es nulo');
+      }
+    });
+  }
+}

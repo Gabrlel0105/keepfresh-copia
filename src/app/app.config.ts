@@ -5,7 +5,6 @@ import { routes } from './app.routes';
 import {HttpClient, provideHttpClient} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateModule} from '@ngx-translate/core';
-
 export const HttpLoaderFactory = (http: HttpClient) =>
   new TranslateHttpLoader(http);
 
