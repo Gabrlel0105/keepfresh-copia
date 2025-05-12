@@ -13,7 +13,7 @@ export class NotificationService {
   constructor(private http: HttpClient) { }
 
   getNotifications(){
-    return this.http.get<Notification[]>(environment.serverBaseUrlNotification);
+    return this.http.get<Notification[]>(`${environment.serverBaseUrl}${environment.serverBaseUrlNotification}`);
   }
 
   addNotification(notification: Notification): Observable<Notification> {

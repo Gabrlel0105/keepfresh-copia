@@ -13,7 +13,6 @@ import {NgForOf} from '@angular/common';
 })
 export class NotificationListComponent implements OnInit {
   notifications: Notification[] = [];
-  showForm = false;
 
   newNotificationAdded: Notification = {
     id: 0,
@@ -33,4 +32,8 @@ export class NotificationListComponent implements OnInit {
       this.notifications = data;
     });
   }
+
+  //Add Notification
+
+  //Remove Notification
 }
