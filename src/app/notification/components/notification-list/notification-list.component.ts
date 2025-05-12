@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import { Notification } from '../../models/notification.entity';
 import { NotificationService } from '../../services/notification.service';
 import {NgForOf} from '@angular/common';
+import {environment} from '../../../../environments/environment';
 
 @Component({
   selector: 'app-notification-list',
@@ -14,6 +15,7 @@ import {NgForOf} from '@angular/common';
 export class NotificationListComponent implements OnInit {
   notifications: Notification[] = [];
 
+
   newNotificationAdded: Notification = {
     id: 0,
     title: '',
@@ -21,6 +23,10 @@ export class NotificationListComponent implements OnInit {
     type: '',
     date: new Date()
   };
+
+  showPopup(item:Notification){
+    alert(item.description);
+  }
 
   constructor(private notificationService: NotificationService) {}
 
@@ -37,4 +43,5 @@ export class NotificationListComponent implements OnInit {
   //Add Notification
 
   //Remove Notification
+  protected readonly environment = environment;
 }
