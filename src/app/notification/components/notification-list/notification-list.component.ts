@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Notification } from '../../models/notification.entity';
 import { NotificationService } from '../../services/notification.service';
+import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-notification-list',
-  imports: [],
+  imports: [
+    NgForOf
+  ],
   templateUrl: './notification-list.component.html',
   styleUrls: ['./notification-list.component.css']
 })
@@ -20,10 +23,6 @@ export class NotificationListComponent implements OnInit {
   };
 
   constructor(private notificationService: NotificationService) {}
-
-  toggleForm() {
-    this.showForm = !this.showForm;
-  }
 
   ngOnInit() {
     this.loadNotifications();

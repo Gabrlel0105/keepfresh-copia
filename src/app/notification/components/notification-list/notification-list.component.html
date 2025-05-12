@@ -1,1 +1,20 @@
-<p>notification-list works!</p>
+<div class="notification-container">
+  <main class="content">
+    <h1>Alerts</h1>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let notification of notifications">
+        <td>{{ notification.id }}</td>
+        <td>{{ notification.title }}</td>
+        <td>{{ notification.description }}</td>
+      </tbody>
+    </table>
+  </main>
+</div>
