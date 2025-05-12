@@ -18,7 +18,8 @@ export class NotificationListComponent implements OnInit {
     id: 0,
     title: '',
     description: '',
-    type: ''
+    type: '',
+    date: new Date()
   };
 
   constructor(private notificationService: NotificationService) {}
