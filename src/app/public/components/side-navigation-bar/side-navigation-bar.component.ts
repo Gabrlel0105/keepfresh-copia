@@ -28,6 +28,7 @@ export class SideNavigationBarComponent {
     { label: 'Orders', icon: 'restaurant_menu', route: 'orders'},
     { label: 'Home', icon: 'home', route: 'home'},
     { label: 'Inventory', icon: 'inventory_2', route: 'products'},
+    { label: 'Profile', icon: 'person', route: 'login-owner'},
   ];
 
 }
