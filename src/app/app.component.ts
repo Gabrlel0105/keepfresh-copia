@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router'; // IMPORTANTE
 import {OrderFormComponent} from './order/components/order-form/order-form.component';
 import {OrderListComponent} from './order/components/order-list/order-list.component';
 import {OrdersComponent} from './order/pages/orders/orders.component';
@@ -19,6 +20,7 @@ import {RouterOutlet} from '@angular/router';
     ToolbarComponent,
     RouterOutlet,
     MatSidenav,
+    RouterModule,
   ],
   templateUrl: './app.component.html',
   standalone: true,
