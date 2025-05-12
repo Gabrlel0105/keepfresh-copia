@@ -36,7 +36,7 @@ export class NotificationListComponent implements OnInit {
 
   loadNotifications() {
     this.notificationService.getNotifications().subscribe((data: Notification[]) => {
-      this.notifications = data.filter(item => item.type === 'inventory');
+      this.notifications = data.filter(item => item.type === 'Inventory');
     });
   }
 
