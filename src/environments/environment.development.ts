@@ -4,4 +4,5 @@ export const environment = {
   serverBaseUrlProducts: 'http://localhost:3000/api/v1/products',
   ordersEndpointPath: '/orders',
   dishesEndpointPath: '/dishes',
+  serverBaseUrlNotification: '/notifications',
 };

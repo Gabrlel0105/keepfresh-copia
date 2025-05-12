@@ -8,6 +8,7 @@ import {SideNavigationBarComponent} from './public/components/side-navigation-ba
 import {ToolbarComponent} from './public/components/toolbar/toolbar.component';
 import {RouterOutlet} from '@angular/router';
 
+import {NotificationListComponent} from './notification/components/notification-list/notification-list.component';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,9 @@ import {RouterOutlet} from '@angular/router';
     RouterOutlet,
     MatSidenav,
     RouterModule,
+  ],
+  imports: [
+    NotificationListComponent
   ],
   templateUrl: './app.component.html',
   standalone: true,
