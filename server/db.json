@@ -1,0 +1,22 @@
+{
+  "notifications": [
+    {
+      "id": 1,
+      "title": "Low temperature",
+      "description": "The temperature is below the threshold.",
+      "type": "Inventory"
+    },
+    {
+      "id": 2,
+      "title": "High humidity",
+      "description": "The humidity level is above the threshold.",
+      "type": "Inventory"
+    },
+    {
+      "id": 3,
+      "title": "Item out of stock",
+      "description": "An item is out of stock.",
+      "type": "Inventory"
+    }
+  ]
+}
