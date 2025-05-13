@@ -23,18 +23,18 @@ const RecoverPasswordOwnerComponent = ()=> import('./public/pages/login/recover-
 const RecoverPasswordWorkerComponent = ()=> import('./public/pages/login/recover-password-worker/recover-password-worker.component').then(m => m.RecoverPasswordWorkerComponent);
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'orders', loadComponent: OrdersComponent},
-  { path: 'products', loadComponent: InventoryComponent},
-  {path : 'login-owner', loadComponent: LoginOwnerComponent},
-  {path : 'login-worker', loadComponent: LoginWorkerComponent},
-  {path: 'register-worker',loadComponent:RegisterWorkerComponent},
-  {path: 'register-owner',loadComponent:RegisterOwnerComponent},
-  {path: 'recover-password-worker',loadComponent:RecoverPasswordWorkerComponent},
-  {path: 'recover-password-owner',loadComponent:RecoverPasswordOwnerComponent},
-  {path: 'restore-owner',component:RestoreOwnerComponent},
-  {path: 'restore-worker',component:RestoreWorkerComponent},
-  {path: 'validation',component:ValidationComponent},
+  { path: 'pages/home', component: HomeComponent },
+  { path: 'pages/orders', loadComponent: OrdersComponent},
+  { path: 'pages/products', loadComponent: InventoryComponent},
+  {path : 'pages/login-owner', loadComponent: LoginOwnerComponent},
+  {path : 'pages/login-worker', loadComponent: LoginWorkerComponent},
+  {path: 'pages/register-worker',loadComponent:RegisterWorkerComponent},
+  {path: 'pages/register-owner',loadComponent:RegisterOwnerComponent},
+  {path: 'pages/recover-password-worker',loadComponent:RecoverPasswordWorkerComponent},
+  {path: 'pages/recover-password-owner',loadComponent:RecoverPasswordOwnerComponent},
+  {path: 'pages/restore-owner',component:RestoreOwnerComponent},
+  {path: 'pages/restore-worker',component:RestoreWorkerComponent},
+  {path: 'pages/validation',component:ValidationComponent},
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', loadComponent: PageNotFoundComponent }
