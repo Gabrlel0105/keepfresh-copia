@@ -1,216 +1,117 @@
 {
-  "products": [
-    {
-      "id": 1,
-      "name": "Cherries",
-      "expirationDate": "2025-06-11",
-      "quantity": 13
-    },
-    {
-      "id": 2,
-      "name": "Tomato",
-      "expirationDate": "2025-05-23",
-      "quantity": 20
-    },
-    {
-      "id": 3,
-      "name": "Bananas",
-      "expirationDate": "2025-05-23",
-      "quantity": 10
-    },
-    {
-      "id": 4,
-      "name": "Lettuce",
-      "expirationDate": "2025-05-29",
-      "quantity": 15
-    },
-    {
-      "id": 5,
-      "name": "Potato",
-      "expirationDate": "2025-10-23",
-      "quantity": 10
-    },
-    {
-      "id": 6,
-      "name": "Empanadation",
-      "expirationDate": "2025-05-09",
-      "quantity": 10
-    }
-  ],
-  "orders": [
-    {
-      "id": 1,
-      "tableNumber": 5,
-      "items": [
-        {
-          "name": "Spaghetti Carbonara",
-          "quantity": 1,
-          "price": 35
-        },
-        {
-          "name": "Agua",
-          "quantity": 2,
-          "price": 3
-        }
+  "financial": {
+    "monthly": [
+      {
+        "id": 1,
+        "month": "January",
+        "revenue": 42500,
+        "expenses": 36200,
+        "profit": 6300
+      },
+      {
+        "id": 2,
+        "month": "February",
+        "revenue": 38700,
+        "expenses": 34500,
+        "profit": 4200
+      },
+      {
+        "id": 3,
+        "month": "March",
+        "revenue": 45300,
+        "expenses": 37800,
+        "profit": 7500
+      },
+      {
+        "id": 4,
+        "month": "April",
+        "revenue": 52100,
+        "expenses": 41200,
+        "profit": 10900
+      },
+      {
+        "id": 5,
+        "month": "May",
+        "revenue": 58900,
+        "expenses": 46500,
+        "profit": 12400
+      },
+      {
+        "id": 6,
+        "month": "June",
+        "revenue": 63400,
+        "expenses": 48200,
+        "profit": 15200
+      }
+    ],
+    "categories": {
+      "revenue": [
+        { "category": "Food", "amount": 185000 },
+        { "category": "Beverages", "amount": 78000 },
+        { "category": "Desserts", "amount": 32000 },
+        { "category": "Catering", "amount": 45000 },
+        { "category": "Merchandise", "amount": 11000 }
       ],
-      "total": 41,
-      "createdAt": "2025-05-08T12:15:00Z"
+      "expenses": [
+        { "category": "Ingredients", "amount": 110000 },
+        { "category": "Staff", "amount": 95000 },
+        { "category": "Rent", "amount": 48000 },
+        { "category": "Utilities", "amount": 32000 },
+        { "category": "Marketing", "amount": 18000 },
+        { "category": "Maintenance", "amount": 14000 },
+        { "category": "Other", "amount": 19000 }
+      ]
     },
-    {
-      "tableNumber": 2,
-      "items": [
-        {
-          "name": "Ensalada César",
-          "quantity": 2,
-          "price": 20
-        },
-        {
-          "name": "Coca Cola",
-          "quantity": 1,
-          "price": 5
-        }
-      ],
-      "total": 45,
-      "createdAt": "2025-05-09T03:13:07.096Z",
-      "id": 2
-    },
-    {
-      "tableNumber": 6,
-      "items": [
-        {
-          "name": "Pizza Margherita",
-          "quantity": 7,
-          "price": 25
-        }
-      ],
-      "total": 175,
-      "createdAt": "2025-05-09T03:17:46.480Z",
-      "id": 3
-    },
-    {
-      "tableNumber": 2,
-      "items": [
-        {
-          "name": "Agua",
-          "quantity": 1,
-          "price": 3
-        }
-      ],
-      "total": 3,
-      "createdAt": "2025-05-09T15:23:46.395Z",
-      "id": 4
-    },
-    {
-      "tableNumber": 8,
-      "items": [
-        {
-          "name": "Pizza Margherita",
-          "quantity": 5,
-          "price": 25
-        }
-      ],
-      "total": 125,
-      "createdAt": "2025-05-09T16:37:05.015Z",
-      "id": 5
-    },
-    {
-      "tableNumber": 10,
-      "items": [
-        {
-          "name": "Coca Cola",
-          "quantity": 1,
-          "price": 5
-        },
-        {
-          "name": "Agua",
-          "quantity": 2,
-          "price": 3
-        }
-      ],
-      "total": 11,
-      "createdAt": "2025-05-09T17:21:49.829Z",
-      "id": 6
-    },
-    {
-      "tableNumber": 10,
-      "items": [
-        {
-          "name": "Spaghetti Carbonara",
-          "quantity": 1,
-          "price": 35
-        },
-        {
-          "name": "Pizza Margherita",
-          "quantity": 1,
-          "price": 25
-        }
-      ],
-      "total": 60,
-      "createdAt": "2025-05-10T03:31:22.472Z",
-      "id": 7
-    },
-    {
-      "tableNumber": 27,
-      "items": [
-        {
-          "name": "Agua",
-          "quantity": 1,
-          "price": 3
-        }
-      ],
-      "total": 3,
-      "createdAt": "2025-05-10T03:34:14.512Z",
-      "id": 8
-    }
-  ],
-  "dishes": [
-    {
-      "id": 1,
-      "name": "Pizza Margherita",
-      "price": 25
-    },
-    {
-      "id": 2,
-      "name": "Spaghetti Carbonara",
-      "price": 35
-    },
-    {
-      "id": 3,
-      "name": "Coca Cola",
-      "price": 5
-    },
-    {
-      "id": 4,
-      "name": "Agua",
-      "price": 3
-    },
-    {
-      "id": 5,
-      "name": "Ensalada César",
-      "price": 20
-    }
-  ],
-  "notifications": [
-    {
-      "id": 1,
-      "title": "Low temperature",
-      "description": "The temperature for steak is below the threshold.",
-      "type": "Inventory",
-      "date": "2025-04-12 10:30AM"
-    },
-    {
-      "id": 2,
-      "title": "High humidity",
-      "description": "The humidity for salmons level is above the threshold.",
-      "type": "Inventory",
-      "date": "2025-04-13 2:40AM"
-    },
-    {
-      "id": 3,
-      "title": "Item expires soon",
-      "description": "The expiration date for the milk is in 3 days.",
-      "type": "Inventory",
-      "date": "2025-04-14 8:15PM"
-    }
-  ]
+    "daily": [
+      {
+        "date": "2023-06-01",
+        "weekday": "Thursday",
+        "revenue": 8950,
+        "expenses": 7200,
+        "profit": 1750
+      },
+      {
+        "date": "2023-06-02",
+        "weekday": "Friday",
+        "revenue": 12500,
+        "expenses": 8900,
+        "profit": 3600
+      },
+      {
+        "date": "2023-06-03",
+        "weekday": "Saturday",
+        "revenue": 14800,
+        "expenses": 9600,
+        "profit": 5200
+      },
+      {
+        "date": "2023-06-04",
+        "weekday": "Sunday",
+        "revenue": 11300,
+        "expenses": 8400,
+        "profit": 2900
+      },
+      {
+        "date": "2023-06-05",
+        "weekday": "Monday",
+        "revenue": 7200,
+        "expenses": 6800,
+        "profit": 400
+      },
+      {
+        "date": "2023-06-06",
+        "weekday": "Tuesday",
+        "revenue": 6900,
+        "expenses": 6500,
+        "profit": 400
+      },
+      {
+        "date": "2023-06-07",
+        "weekday": "Wednesday",
+        "revenue": 8400,
+        "expenses": 7300,
+        "profit": 1100
+      }
+    ]
+  }
 }

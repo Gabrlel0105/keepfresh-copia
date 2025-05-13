@@ -1,0 +1,26 @@
+<app-card title="Monthly Performance" [showActions]="true">
+  <select card-actions (change)="updateChartType($event)">
+    <option value="line">Line</option>
+    <option value="area">Area</option>
+    <option value="bar">Bar</option>
+  </select>
+  <div *ngIf="chartOptions" class="chart-container">
+    <div id="revenue-chart">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xaxis"
+        [dataLabels]="chartOptions.dataLabels"
+        [grid]="chartOptions.grid"
+        [stroke]="chartOptions.stroke"
+        [title]="chartOptions.title"
+        [markers]="chartOptions.markers"
+        [yaxis]="chartOptions.yaxis"
+        [legend]="chartOptions.legend"
+        [tooltip]="chartOptions.tooltip"
+        [colors]="chartOptions.colors"
+        [fill]="chartOptions.fill"
+      ></apx-chart>
+    </div>
+  </div>
+</app-card>

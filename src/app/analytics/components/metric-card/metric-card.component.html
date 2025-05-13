@@ -1,0 +1,15 @@
+<app-card>
+  <div class="metric-card">
+    <div class="metric-card__icon" *ngIf="icon" [ngStyle]="{'background-color': iconBgColor}">
+      <span class="material-icons">{{ icon }}</span>
+    </div>
+    <div class="metric-card__content">
+      <h3 class="metric-card__title">{{ title }}</h3>
+      <p class="metric-card__value" [ngClass]="valueClass">{{ prefix }}{{ formattedValue }}</p>
+      <p class="metric-card__change" *ngIf="showChange" [ngClass]="changeClass">
+        <span class="material-icons">{{ changeIcon }}</span>
+        {{ changeValue }}%
+      </p>
+    </div>
+  </div>
+</app-card>

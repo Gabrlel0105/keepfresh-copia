@@ -1,0 +1,11 @@
+<div class="card" [ngClass]="{'card--no-padding': noPadding}">
+  <div class="card__header" *ngIf="title">
+    <h2 class="card__title">{{ title }}</h2>
+    <div class="card__actions" *ngIf="showActions">
+      <ng-content select="[card-actions]"></ng-content>
+    </div>
+  </div>
+  <div class="card__content">
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<app-card title="Daily Performance" [showActions]="true">
+  <div class="chart-container">
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [xaxis]="chartOptions.xaxis"
+      [dataLabels]="chartOptions.dataLabels"
+      [grid]="chartOptions.grid"
+      [stroke]="chartOptions.stroke"
+      [title]="chartOptions.title"
+      [markers]="chartOptions.markers"
+      [yaxis]="chartOptions.yaxis"
+      [legend]="chartOptions.legend"
+      [tooltip]="chartOptions.tooltip"
+      [colors]="chartOptions.colors"
+      [fill]="chartOptions.fill"
+    ></apx-chart>
+  </div>
+  <div class="daily-stats-grid">
+    <div class="daily-stat" *ngFor="let day of dailyData">
+      <div class="day-name">{{ day.weekday }}</div>
+      <div class="stat-values">
+        <div class="stat-item">
+          <span class="stat-label">Revenue:</span>
+          <span class="stat-value">${{ day.revenue | number }}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Expenses:</span>
+          <span class="stat-value">${{ day.expenses | number }}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Profit:</span>
+          <span class="stat-value" [ngClass]="day.profit > 0 ? 'text-success' : 'text-error'">${{ day.profit | number }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-card>

@@ -1,0 +1,82 @@
+<div class="dashboard">
+  <section class="dashboard-header">
+    <h2 class="page-title">Financial Dashboard</h2>
+    <div class="date-filter">
+      <span>Last 6 months</span>
+      <button class="btn btn-primary">Filter</button>
+    </div>
+  </section>
+
+  <section class="metric-cards">
+    <app-metric-card
+      title="Total Revenue"
+      [value]="totalRevenue"
+      format="currency"
+      icon="payments"
+      iconBgColor="var(--secondary)"
+      [showChange]="true"
+      [changeValue]="7.2"
+    ></app-metric-card>
+
+    <app-metric-card
+      title="Total Expenses"
+      [value]="totalExpenses"
+      format="currency"
+      icon="shopping_cart"
+      iconBgColor="var(--error)"
+      [showChange]="true"
+      [changeValue]="-2.4"
+    ></app-metric-card>
+
+    <app-metric-card
+      title="Net Profit"
+      [value]="totalProfit"
+      format="currency"
+      icon="attach_money"
+      iconBgColor="var(--success)"
+      [showChange]="true"
+      [changeValue]="12.5"
+    ></app-metric-card>
+
+    <app-metric-card
+      title="Profit Margin"
+      [value]="profitMargin"
+      format="percent"
+      icon="show_chart"
+      iconBgColor="var(--accent)"
+      [showChange]="true"
+      [changeValue]="3.8"
+    ></app-metric-card>
+  </section>
+
+  <section class="charts-section">
+    <div class="chart-row">
+      <div class="chart-col main-chart">
+        <app-revenue-chart></app-revenue-chart>
+      </div>
+    </div>
+
+    <div class="chart-row">
+      <div class="chart-col">
+        <app-category-chart
+          [categories]="revenueCategories"
+          title="Revenue by Category"
+          type="revenue"
+        ></app-category-chart>
+      </div>
+      <div class="chart-col">
+        <app-category-chart
+          [categories]="expenseCategories"
+          title="Expenses by Category"
+          type="expenses"
+        ></app-category-chart>
+      </div>
+    </div>
+
+    <div class="chart-row">
+      <div class="chart-col main-chart">
+        <app-daily-chart></app-daily-chart>
+      </div>
+    </div>
+  </section>
+</div>
