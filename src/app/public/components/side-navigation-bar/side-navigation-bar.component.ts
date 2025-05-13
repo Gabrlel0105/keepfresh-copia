@@ -29,6 +29,7 @@ export class SideNavigationBarComponent {
     { label: 'Home', icon: 'home', route: 'pages/home'},
     { label: 'Inventory', icon: 'inventory_2', route: 'pages/products'},
     { label: 'Profile', icon: 'person', route: 'pages/login-owner'},
+    { label: 'Notifications', icon: 'alerts', route:'pages/notifications'}
   ];
 
 }

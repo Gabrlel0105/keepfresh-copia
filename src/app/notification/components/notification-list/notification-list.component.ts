@@ -10,6 +10,7 @@ import {environment} from '../../../../environments/environment';
     NgForOf
   ],
   templateUrl: './notification-list.component.html',
+  standalone: true,
   styleUrls: ['./notification-list.component.css']
 })
 export class NotificationListComponent implements OnInit {

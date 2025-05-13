@@ -21,8 +21,10 @@ const RegisterOwnerComponent = ()=> import('./public/pages/login/register-user/r
 const RegisterWorkerComponent = ()=> import('./public/pages/login/register-user/register-worker/register-worker.component').then(m => m.RegisterWorkerComponent);
 const RecoverPasswordOwnerComponent = ()=> import('./public/pages/login/recover-password-owner/recover-password-owner.component').then(m => m.RecoverPasswordOwnerComponent);
 const RecoverPasswordWorkerComponent = ()=> import('./public/pages/login/recover-password-worker/recover-password-worker.component').then(m => m.RecoverPasswordWorkerComponent);
+const NotificationsComponent = () => import('./notification/components/notification-list/notification-list.component').then(m => m.NotificationListComponent);
 
 export const routes: Routes = [
+  { path: 'pages/notifications', loadComponent: NotificationsComponent},
   { path: 'pages/home', component: HomeComponent },
   { path: 'pages/orders', loadComponent: OrdersComponent},
   { path: 'pages/products', loadComponent: InventoryComponent},
