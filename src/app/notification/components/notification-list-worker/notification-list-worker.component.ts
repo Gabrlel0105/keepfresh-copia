@@ -7,13 +7,12 @@ import {environment} from '../../../../environments/environment';
 @Component({
   selector: 'app-notification-list',
   imports: [
-    NgForOf
+    NgForOf,
   ],
-  templateUrl: './notification-list.component.html',
-  standalone: true,
-  styleUrls: ['./notification-list.component.css']
+  templateUrl: './notification-list-worker.component.html',
+  styleUrls: ['./notification-list-worker.component.css']
 })
-export class NotificationListComponent implements OnInit {
+export class NotificationListWorkerComponent implements OnInit {
   notifications: Notification[] = [];
 
 
@@ -37,7 +36,7 @@ export class NotificationListComponent implements OnInit {
 
   loadNotifications() {
     this.notificationService.getNotifications().subscribe((data: Notification[]) => {
-      this.notifications = data.filter(item => item.type === 'Inventory');
+      this.notifications = data.filter(item => item.type === 'worker');
     });
   }
 
