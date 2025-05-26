@@ -15,7 +15,7 @@ import {NgIf} from '@angular/common';
 export class LossAnalyticsComponent implements OnInit{
 
   chartSeries: any[] = [];
-  chartOptions: any = {};  // inicializado vacío
+  chartOptions: any = {};
 
   constructor(private productService: ProductService) {}
 
@@ -25,7 +25,7 @@ export class LossAnalyticsComponent implements OnInit{
       const data = orderedDays.map(day => totalsByDay[day] ?? 0);
 
       this.chartSeries = [{
-        name: 'Costo total',
+        name: 'Total Cost',
         data: data,
         color: '#FF0000',
       }];
@@ -34,7 +34,7 @@ export class LossAnalyticsComponent implements OnInit{
         chart: { type: 'area', height: 350 },
         stroke: { curve: 'smooth' },
         dataLabels: { enabled: false },
-        xaxis: { categories: ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'] },
+        xaxis: { categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] },
         tooltip: { x: { format: 'dddd' } },
         fill: {
           type: 'gradient',
