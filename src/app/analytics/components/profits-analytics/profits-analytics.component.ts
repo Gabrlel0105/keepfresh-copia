@@ -34,11 +34,11 @@ export type ChartOptions = {
 export class ProfitsAnalyticsComponent implements OnInit{
 
   public chartOptions: ChartOptions = {
-    series: [{ name: 'Ganancia', data: [] }],
+    series: [{ name: 'Profit', data: [] }],
     chart: { type: 'area', height: 350 },
     dataLabels: { enabled: false },
     stroke: { curve: 'smooth' },
-    title: { text: 'Ganancias Diarias del Restaurante', align: 'left' },
+    title: { text: ' ', align: 'left' },
     fill: {
       type: 'gradient',
       gradient: {
@@ -56,7 +56,7 @@ export class ProfitsAnalyticsComponent implements OnInit{
   ngOnInit(): void {
     this.orderService.getProfitsPerDay().subscribe(data => {
       this.chartOptions.series = [{
-        name: 'Ganancia',
+        name: 'Profit',
         data: data.map(item => item.profit),
         color: '#4cff00',
       }];

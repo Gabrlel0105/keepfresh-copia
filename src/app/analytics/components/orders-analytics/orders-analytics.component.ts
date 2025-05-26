@@ -42,7 +42,7 @@ export class OrdersAnalyticsComponent implements OnInit {
 
         const salesMap = new Map<number, number>();
 
-        // Sumar cantidades por dish_id (considerando que en JSON es dish_id)
+
         for (let od of orderDishes) {
           const dishId = od['dish_id'] || od.dish_id;
           const currentQty = salesMap.get(dishId) || 0;
@@ -66,7 +66,7 @@ export class OrdersAnalyticsComponent implements OnInit {
         this.chartOptions = {
           series: [
             {
-              name: 'Ventas',
+              name: 'Sales',
               data: values
             }
           ],
@@ -75,7 +75,7 @@ export class OrdersAnalyticsComponent implements OnInit {
             height: 350
           },
           title: {
-            text: 'Platos más vendidos'
+            text: ' '
           },
           xaxis: {
             categories: labels

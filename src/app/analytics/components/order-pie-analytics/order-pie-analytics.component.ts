@@ -65,7 +65,7 @@ export class OrderPieAnalyticsComponent implements OnInit{
           },
           labels: labels,
           title: {
-            text: 'Platos más vendidos'
+            text: ' '
           }
         };
       });
