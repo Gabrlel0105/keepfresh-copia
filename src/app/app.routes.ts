@@ -31,6 +31,6 @@ export const routes: Routes = [
   {path: 'pages/restore-worker',component:RestoreWorkerComponent},
   {path: 'pages/validation',component:ValidationComponent},
 
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'pages/dashboard', pathMatch: 'full' },
   { path: '**', loadComponent: PageNotFoundComponent }
 ];
