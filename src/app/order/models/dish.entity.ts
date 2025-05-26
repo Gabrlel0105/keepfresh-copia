@@ -1,19 +1,17 @@
 export class Dish {
-  id?: number;
-  name?: string;
-  price?: number;
 
-  constructor(data: Partial<Dish>) {
-    Object.assign(this, data);
-  }
-}
+  id: number;
+  name: string;
+  price: number;
 
-export class DishItem {
-  name?: string;
-  quantity?: number;
-  price?: number;
+  constructor(dishData: {
+    id?: number,
+    name?: string,
+    price?: number,
+  }) {
 
-  constructor(data: Partial<DishItem>) {
-    Object.assign(this, data);
+    this.id = dishData.id || 0;
+    this.name = dishData.name || '';
+    this.price = dishData.price || 0;
   }
 }

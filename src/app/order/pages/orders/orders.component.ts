@@ -1,20 +1,17 @@
-import { Component } from '@angular/core';
-import {Order} from '../../models/order.entity';
-import {OrderService} from '../../services/order.service';
-import {OrderListComponent} from '../../components/order-list/order-list.component';
-import {OrderResource} from '../../services/order.response';
-import {OrderAssembler} from '../../services/order.assembler';
+import {Component, ViewChild} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {OrderFormComponent} from '../../components/order-form/order-form.component';
+import {OrderCardComponent} from '../../components/order-card/order-card.component';
 
 @Component({
   selector: 'app-orders',
   imports: [
-    OrderListComponent,
     CommonModule,
     RouterModule,
     OrderFormComponent,
+    OrderCardComponent,
+
   ],
   templateUrl: './orders.component.html',
   standalone: true,
@@ -22,13 +19,12 @@ import {OrderFormComponent} from '../../components/order-form/order-form.compone
 })
 export class OrdersComponent {
 
-  orders: Order[] = [];
+  @ViewChild('orderCard') orderCardComponent!: OrderCardComponent;
 
-  constructor(private apiService: OrderService) {
-    // @ts-ignore
-    this.apiService.getAll().subscribe((resources: OrderResource[]) => {
-      this.orders = resources.map(OrderAssembler.toEntityFromResource);
-    });
+  onNewOrder() {
+    if (this.orderCardComponent) {
+      this.orderCardComponent.loadData();
+    }
   }
 
 }
