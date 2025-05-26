@@ -1,69 +1,82 @@
 import {Component, OnInit} from '@angular/core';
-import {NgForOf, NgIf} from '@angular/common';
-import {Product} from '../../model/product-entity';
+import {Product} from '../../models/product.entity';
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {ProductService} from '../../services/product.service';
-import {FormsModule} from '@angular/forms';
+import {CommonModule} from '@angular/common';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
 
 @Component({
   selector: 'app-inventory-table',
   imports: [
-    NgForOf,
+    CommonModule,
+    ReactiveFormsModule,
     FormsModule,
-    NgIf
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
   ],
   templateUrl: './inventory-table.component.html',
-  standalone: true,
   styleUrl: './inventory-table.component.css'
 })
-export class InventoryTable implements OnInit {
-  products: Product[]=[];
-  showForm = false;
+export class InventoryTableComponent implements OnInit {
+  products: Product[] = [];
+  productForm: FormGroup;
 
-  newProductAdded: Product= {
-    id: 0,
-    name: '',
-    expirationDate: '',
-    quantity: 0
-  };
-
-  toggleForm(): void{
-    this.showForm = !this.showForm;
+  constructor(
+    private productService: ProductService,
+    private fb: FormBuilder
+  ) {
+    this.productForm = this.fb.group({
+      inventory_id: [null, Validators.required],
+      name: ['', Validators.required],
+      expiration_date: ['', Validators.required],
+      stock: [0, [Validators.required, Validators.min(1)]],
+      measurement_unit: ['', Validators.required],
+      price: [0, [Validators.required, Validators.min(0.01)]],
+    });
   }
-
-  saveProduct(): void {
-    if (this.newProductAdded.name && this.newProductAdded.expirationDate && this.newProductAdded.quantity > 0) {
-      this.productService.addProduct(this.newProductAdded).subscribe(() => {
-        this.loadProducts();
-        this.products.push(this.newProductAdded);
-        this.newProductAdded = {name: '', expirationDate: '', quantity: 0, id: 0};
-        this.showForm = false;
-      });
-    }
-  }
-
-  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
     this.loadProducts();
   }
 
   loadProducts(): void {
-    this.productService.getProducts().subscribe(data=>{
-      this.products = data;
+    this.productService.getProducts().subscribe(products => {
+      this.products = products;
     });
   }
 
-  /*addProduct(){
-    const newProduct: Product ={
-      id: 0,
-      name: 'New Product',
-      expirationDate: new Date().toISOString().split('T')[0],
-      quantity:10
+  onSubmit(): void {
+    if (this.productForm.invalid) return;
+
+    const formValue = this.productForm.value;
+
+    // Aquí NO asignamos 'id' manualmente
+    const newProduct = {
+      // id: no enviamos nada
+      inventory_id: formValue.inventory_id,
+      name: formValue.name,
+      expiration_date: formValue.expiration_date,
+      stock: formValue.stock,
+      measurement_unit: formValue.measurement_unit,
+      price: formValue.price
     };
 
-    this.productService.addProduct(newProduct).subscribe(()=>{
-      this.loadProducts();
-    })
-  }*/
+    this.productService.addProduct(newProduct as any).subscribe({
+      next: (added) => {
+        this.products.push(added);
+        this.productForm.reset();
+      },
+      error: (err) => {
+        console.error("Error al agregar producto:", err);
+      }
+    });
+  }
 
 }

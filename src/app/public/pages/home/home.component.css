@@ -1,0 +1,28 @@
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.profits {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.losses {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.orders {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.pie {
+  grid-column: 2;
+  grid-row: 2;
+}

@@ -25,10 +25,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 export class SideNavigationBarComponent {
 
   sidenavItems: SideNavigationItem[] =[
+    { label: 'Dashboard', icon: 'dashboard', route: 'pages/dashboard'},
     { label: 'Orders', icon: 'restaurant_menu', route: 'pages/orders'},
-    { label: 'Home', icon: 'home', route: 'pages/home'},
     { label: 'Inventory', icon: 'inventory_2', route: 'pages/products'},
     { label: 'Profile', icon: 'person', route: 'pages/login-owner'},
+    { label: 'Notifications', icon: 'alerts', route:'pages/notifications'}
   ];
 
 }

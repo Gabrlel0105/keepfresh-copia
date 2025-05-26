@@ -1,13 +1,25 @@
-import {DishItem} from './dish.entity';
+export class Order{
 
-export class Order {
   id?: number;
-  tableNumber?: number;
-  items?: DishItem[];
-  total?: number;
-  createdAt?: string;
+  restaurantId: number;
+  tableNumber: number;
+  total: number;
+  createdAt: Date;
 
-  constructor(data: Partial<Order>) {
-    Object.assign(this, data);
+  constructor(orderData: {
+    id?: number,
+    restaurantId?: number,
+    tableNumber?: number,
+    total?: number,
+    createdAt?: Date,
+  }) {
+
+    this.id = orderData.id || 0;
+    this.restaurantId = orderData.restaurantId || 0;
+    this.tableNumber = orderData.tableNumber || 0;
+    this.total = orderData.total || 0;
+    this.createdAt = orderData.createdAt || new Date();
+
   }
+
 }

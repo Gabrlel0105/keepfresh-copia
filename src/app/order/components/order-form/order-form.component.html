@@ -1,22 +1,80 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()" class="order-form">
-  <h2>Create new Order</h2>
+<mat-card class="order-form">
+  <mat-card-header>
+    <mat-card-title>
+      <h2>Crear Nueva Orden</h2>
+    </mat-card-title>
+  </mat-card-header>
 
-  <div class="form-group">
-    <label for="tableNumber">Table number</label>
-    <input type="number" id="tableNumber" formControlName="tableNumber" />
-  </div>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="submit()">
 
-  <div formArrayName="items" class="items-group">
-    <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i" class="item-row">
-      <select formControlName="name">
-        <option value="" disabled selected>Select a dish from menu</option>
-        <option *ngFor="let dish of dishes" [value]="dish.name">{{ dish.name }}</option>
-      </select>
-      <input type="number" formControlName="quantity" min="1" />
-      <button type="button" class="remove-btn" (click)="removeItem(i)">Remove</button>
-    </div>
-  </div>
+      <!-- Número de Mesa -->
+      <div class="form-group">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Número de Mesa</mat-label>
+          <input matInput type="number" formControlName="tableNumber" placeholder="Ej: 5" />
+          <mat-error *ngIf="form.get('tableNumber')?.hasError('required')">
+            El número de mesa es requerido.
+          </mat-error>
+          <mat-error *ngIf="form.get('tableNumber')?.hasError('min')">
+            El número de mesa debe ser al menos 1.
+          </mat-error>
+        </mat-form-field>
+      </div>
 
-  <button type="button" class="add-btn" (click)="addItem()">Add dish</button>
-  <button type="submit" class="submit-btn">Save order</button>
-</form>
+      <!-- Lista de platos -->
+      <div formArrayName="items">
+        <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i" class="item-row">
+
+          <!-- Plato -->
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Plato</mat-label>
+            <mat-select formControlName="dishId">
+              <mat-option [value]="null" disabled>Selecciona un plato</mat-option>
+              <mat-option *ngFor="let dish of dishes" [value]="dish.id">
+                {{ dish.name }} (S/ {{ dish.price }})
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="item.get('dishId')?.hasError('required')">
+              Debe seleccionar un plato.
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Cantidad -->
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Cantidad</mat-label>
+            <input matInput type="number" formControlName="quantity" min="1" />
+            <mat-error *ngIf="item.get('quantity')?.hasError('required')">
+              Cantidad requerida.
+            </mat-error>
+            <mat-error *ngIf="item.get('quantity')?.hasError('min')">
+              Mínimo 1.
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Eliminar -->
+          <button mat-raised-button color="warn" type="button" class="remove-btn" (click)="removeDish(i)" *ngIf="items.length > 1">
+            Eliminar
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Botón agregar plato -->
+      <button mat-raised-button type="button" class="add-btn" (click)="addDish()">
+        + Agregar Plato
+      </button>
+
+      <!-- Total -->
+      <div class="form-group">
+        <strong>Total Estimado: S/ {{ calculateTotal() | number:'1.2-2' }}</strong>
+      </div>
+
+      <!-- Botón guardar -->
+      <button mat-raised-button type="submit" class="submit-btn" [disabled]="form.invalid || items.length === 0">
+        Guardar Orden
+      </button>
+
+    </form>
+  </mat-card-content>
+</mat-card>
