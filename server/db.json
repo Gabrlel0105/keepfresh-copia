@@ -85,6 +85,15 @@
       "measurement_unit": "Kg",
       "price": 3,
       "id": 8
+    },
+    {
+      "inventory_id": 1,
+      "name": "Lechuga",
+      "expiration_date": "2027-04-12",
+      "stock": 1,
+      "measurement_unit": "Kg",
+      "price": 2.5,
+      "id": 9
     }
   ],
   "dishes": [
