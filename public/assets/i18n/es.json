@@ -1,0 +1,24 @@
+{
+  "TOOLBAR": {
+    "SIGN_IN": "Iniciar sesión",
+    "SIGN_UP": "Registrarse"
+  },
+
+  "SIDENAV":{
+    "ORDERS": "Ordenes",
+    "HOME": "Inicio",
+    "INVENTORY": "Inventario",
+    "PROFILE": "Perfil",
+    "NOTIFICATIONS": "Notificaciones"
+  },
+  "login-owner": {
+    "WORKER": "Trabajador",
+    "OWNER": "Dueño",
+    "SIGN IN": "Iniciar sesión como dueño",
+    "FIRST_TIME": "¿Primera vez en Keepltfresh?",
+    "CREATE_ACCOUNT": "¡Crea tu cuenta ahora!",
+    "FORGOT_PASSWORD": "¿Olvidaste tu contraseña?",
+    "LOGIN_OWNER": "Iniciar sesión como dueño"
+  }
+
+}

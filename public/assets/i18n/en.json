@@ -1,0 +1,23 @@
+{
+  "TOOLBAR": {
+    "SIGN_IN": "Sign In",
+    "SIGN_UP": "Sign Up"
+  },
+  "SIDENAV":{
+"ORDERS": "Orders",
+  "HOME": "Home",
+    "INVENTORY": "Inventory",
+    "PROFILE": "Profile",
+    "NOTIFICATIONS": "Notifications",
+    "DASHBOARD": "Paneles de control"
+},
+  "login-owner": {
+    "WORKER": "Worker",
+    "OWNER": "Owner",
+    "SIGN IN": "Sign in as owner",
+    "FIRST_TIME": "First time on Keepltfresh?",
+    "CREATE_ACCOUNT": "Create your account now!",
+    "FORGOT_PASSWORD": "Forgot your password?",
+    "LOGIN_OWNER": "Log in as Owner"
+  }
+}
