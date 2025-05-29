@@ -1,8 +1,4 @@
 <div class="content-primary">
-  <mat-toolbar style="color: #FF7A00; background-color: #14131B">
-    <img src="https://i.postimg.cc/ncFdhcSS/logo-removebg-preview.png" width="100px">
-    <div class="mat-spacer"></div>
-  </mat-toolbar>
 
   <br><br>
   <mat-card class="contenedor">
@@ -11,8 +7,8 @@
 
         <section>
           <div class="example-button-row section-button">
-            <button mat-button id="btnn" [routerLink]="['/register-worker']">Worker</button>
-            <button mat-button id="btnn" [routerLink]="['/register-owner']" style="margin-left: 1em">Owner</button>
+            <button mat-button id="btnn" routerLink="/pages/register-worker">Worker</button>
+            <button mat-button id="btnn" routerLink="/pages/register-owner" style="margin-left: 1em">Owner</button>
           </div>
         </section>
 
@@ -20,38 +16,38 @@
         <mat-label style="text-align: center; font-size: 30px; color: #14131B"><b>Register</b></mat-label>
         <br>
 
-        <mat-label style="text-align:left">First Name</mat-label>
+        <mat-label style="text-align: left">First Name</mat-label>
         <mat-form-field>
-          <input matInput [(ngModel)]="user.firstName" type="text" placeholder="First Name" class="input">
+          <input matInput [(ngModel)]="user.firstName" type="text" placeholder="Enter your first name" class="input">
         </mat-form-field>
 
-        <mat-label style="text-align:left">Last Name</mat-label>
+        <mat-label style="text-align: left">Last Name</mat-label>
         <mat-form-field>
-          <input matInput [(ngModel)]="user.lastName" type="text" placeholder="Last Name" class="input">
+          <input matInput [(ngModel)]="user.lastName" type="text" placeholder="Enter your last name" class="input">
         </mat-form-field>
 
-        <mat-label style="text-align:left">Date of Birth</mat-label>
+        <mat-label style="text-align: left">Date of Birth</mat-label>
         <mat-form-field>
           <input matInput [(ngModel)]="user.birthDate" type="date" class="input">
         </mat-form-field>
 
-        <mat-label style="text-align:left">Phone</mat-label>
+        <mat-label style="text-align: left">Phone</mat-label>
         <mat-form-field>
-          <input matInput [(ngModel)]="user.phoneNumber" type="number" placeholder="Phone" class="input">
+          <input matInput [(ngModel)]="user.phoneNumber" type="tel" placeholder="Enter your phone number" class="input">
         </mat-form-field>
 
-        <mat-label style="text-align:left">Email</mat-label>
+        <mat-label style="text-align: left">Email</mat-label>
         <mat-form-field>
-          <input matInput [(ngModel)]="user.email" type="text" placeholder="Email" class="input">
+          <input matInput [(ngModel)]="user.email" type="email" placeholder="Enter your email" class="input">
         </mat-form-field>
 
-        <mat-label style="text-align:left">Password</mat-label>
+        <mat-label style="text-align: left">Password</mat-label>
         <mat-form-field>
-          <input matInput [(ngModel)]="user.password" type="text" placeholder="Password" class="input">
+          <input matInput [(ngModel)]="user.password" type="password" placeholder="Create a password" class="input">
         </mat-form-field>
 
-        <button mat-button style="color: white; background-color: #FF7A00" type="submit" (click)="onSubmit()" [routerLink]="['/validation']">
-          Register as owner
+        <button mat-button style="color: white; background-color: #FF7A00" type="submit" (click)="onSubmit()" routerLink="/pages/validation">
+          Register as Owner
         </button>
       </div>
     </mat-card-content>
