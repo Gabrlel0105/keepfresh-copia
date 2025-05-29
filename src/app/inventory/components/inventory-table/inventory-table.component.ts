@@ -22,6 +22,7 @@ import {MatSelectModule} from '@angular/material/select';
     MatSelectModule,
   ],
   templateUrl: './inventory-table.component.html',
+  standalone: true,
   styleUrl: './inventory-table.component.css'
 })
 export class InventoryTableComponent implements OnInit {

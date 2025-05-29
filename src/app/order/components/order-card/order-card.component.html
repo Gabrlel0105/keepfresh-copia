@@ -1,7 +1,7 @@
 <div class="orders-grid">
   <mat-card *ngFor="let ov of orderViews" class="order-card">
     <mat-card-header>
-      <mat-card-title>Mesa N°{{ ov.order.tableNumber }}</mat-card-title>
+      <mat-card-title>Table N°{{ ov.order.tableNumber }}</mat-card-title>
       <mat-card-subtitle>{{ ov.order.createdAt | date: 'short' }}</mat-card-subtitle>
     </mat-card-header>
 
