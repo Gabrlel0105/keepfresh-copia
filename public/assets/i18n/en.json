@@ -19,5 +19,44 @@
     "CREATE_ACCOUNT": "Create your account now!",
     "FORGOT_PASSWORD": "Forgot your password?",
     "LOGIN_OWNER": "Log in as Owner"
+  },
+
+  "login-worker": {
+    "WORKER": "Worker",
+    "OWNER": "Owner",
+    "SIGN_IN": "Sign In",
+    "FIRST_TIME": "First time on Keepltfresh?",
+    "CREATE_ACCOUNT": "Create your account now!",
+    "EMAIL_PLACEHOLDER": "Email address",
+    "PASSWORD_PLACEHOLDER": "Password",
+    "FORGOT_PASSWORD": "Forgot your password?",
+    "LOGIN_WORKER": "Log in as Worker"
+  },
+
+  "recover-owner": {
+    "RECOVER_PASSWORD": "Recover Password",
+    "OWNER": "Owner",
+    "INSTRUCTIONS": "If you forgot your password, you can reset it using the email you used to create your account.",
+    "EMAIL_LABEL": "Email Address",
+    "EMAIL_PLACEHOLDER": "Enter your email address",
+    "SEND_CODE": "Send Code",
+    "CODE_LABEL": "Enter the Code",
+    "CODE_PLACEHOLDER": "Code",
+    "RESET_PASSWORD": "Reset Password"
+  },
+
+  "reset-worker": {
+    "RESET_PASSWORD": "Reset Password",
+    "WORKER": "Worker",
+    "INSTRUCTIONS": "If you forgot your password, you can reset it using the email you used to create your account.",
+    "EMAIL_LABEL": "Email Address",
+    "EMAIL_PLACEHOLDER": "Enter your email address",
+    "SEND_CODE": "Send Code",
+    "CODE_LABEL": "Enter the Code",
+    "CODE_PLACEHOLDER": "Code",
+    "RESET_BUTTON": "Reset Password"
   }
+
+
+
 }

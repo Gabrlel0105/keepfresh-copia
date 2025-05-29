@@ -7,6 +7,7 @@ import {MatInput, MatLabel} from '@angular/material/input';
 import {MatFormField} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import {RegisterOwnerService} from '../../../services/register-owner.service';
+import {TranslatePipe} from '@ngx-translate/core';
 @Component({
   selector: 'app-login-worker',
   templateUrl: './login-worker.component.html',
@@ -20,7 +21,8 @@ import {RegisterOwnerService} from '../../../services/register-owner.service';
     MatLabel,
     MatInput,
     FormsModule,
-    MatAnchor
+    MatAnchor,
+    TranslatePipe
   ],
   styleUrls: ['./login-worker.component.css']
 })

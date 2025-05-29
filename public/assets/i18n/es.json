@@ -19,6 +19,45 @@
     "CREATE_ACCOUNT": "¡Crea tu cuenta ahora!",
     "FORGOT_PASSWORD": "¿Olvidaste tu contraseña?",
     "LOGIN_OWNER": "Iniciar sesión como dueño"
+  },
+
+  "login-worker": {
+    "WORKER": "Trabajador",
+    "OWNER": "Dueño",
+    "SIGN_IN": "Iniciar sesión",
+    "FIRST_TIME": "¿Primera vez en Keepltfresh?",
+    "CREATE_ACCOUNT": "¡Crea tu cuenta ahora!",
+    "EMAIL_PLACEHOLDER": "Correo electrónico",
+    "PASSWORD_PLACEHOLDER": "Contraseña",
+    "FORGOT_PASSWORD": "¿Olvidaste tu contraseña?",
+    "LOGIN_WORKER": "Iniciar sesión como Trabajador"
+  },
+
+
+  "recover-owner": {
+    "RECOVER_PASSWORD": "Recuperar contraseña",
+    "OWNER": "Dueño",
+    "INSTRUCTIONS": "Si olvidaste tu contraseña, puedes restablecerla usando el correo que usaste para crear tu cuenta.",
+    "EMAIL_LABEL": "Correo electrónico",
+    "EMAIL_PLACEHOLDER": "Ingresa tu correo electrónico",
+    "SEND_CODE": "Enviar código",
+    "CODE_LABEL": "Ingresa el código",
+    "CODE_PLACEHOLDER": "Código",
+    "RESET_PASSWORD": "Restablecer contraseña"
+  },
+
+  "reset-worker": {
+    "RESET_PASSWORD": "Restablecer contraseña",
+    "WORKER": "Trabajador",
+    "INSTRUCTIONS": "Si olvidaste tu contraseña, puedes restablecerla usando el correo que usaste para crear tu cuenta.",
+    "EMAIL_LABEL": "Correo electrónico",
+    "EMAIL_PLACEHOLDER": "Ingresa tu correo electrónico",
+    "SEND_CODE": "Enviar código",
+    "CODE_LABEL": "Ingresa el código",
+    "CODE_PLACEHOLDER": "Código",
+    "RESET_BUTTON": "Restablecer contraseña"
   }
+
+
 
 }
