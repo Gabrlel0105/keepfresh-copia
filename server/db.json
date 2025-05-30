@@ -94,6 +94,15 @@
       "measurement_unit": "Kg",
       "price": 2.5,
       "id": 9
+    },
+    {
+      "inventory_id": 1,
+      "name": "Choclo",
+      "expiration_date": "2025-06-12",
+      "stock": 5,
+      "measurement_unit": "Kg",
+      "price": 2.5,
+      "id": 10
     }
   ],
   "dishes": [
