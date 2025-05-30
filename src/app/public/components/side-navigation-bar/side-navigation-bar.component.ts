@@ -4,7 +4,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatIcon } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 import { MatListItem, MatNavList } from '@angular/material/list';
 import { SideNavigationItem } from '../../models/side-navigation-item';
 
@@ -22,7 +21,6 @@ import { SideNavigationItem } from '../../models/side-navigation-item';
     RouterLink,
     RouterLinkActive,
     MatIcon,
-    LanguageSwitcherComponent,
     TranslateModule
   ]
 })
