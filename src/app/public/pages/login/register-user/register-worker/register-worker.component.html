@@ -7,47 +7,71 @@
 
         <section>
           <div class="example-button-row section-button">
-            <button mat-button [routerLink]="['/pages/register-worker']">Worker</button>
-            <button mat-button [routerLink]="['/pages/register-owner']" style="margin-left: 1em">Owner</button>
+            <button mat-button [routerLink]="['/pages/register-worker']">
+              {{ 'register-worker.WORKER' | translate }}
+            </button>
+            <button mat-button [routerLink]="['/pages/register-owner']" style="margin-left: 1em">
+              {{ 'register-worker.DUENO' | translate }}
+            </button>
           </div>
         </section>
 
         <br><br>
-        <mat-label style="text-align: center; font-size: 30px; color: #14131B"><b>Register</b></mat-label>
+        <mat-label style="text-align: center; font-size: 30px; color: #14131B">
+          <b>{{ 'register-worker.REGISTER' | translate }}</b>
+        </mat-label>
         <br>
 
-        <mat-label style="text-align: left">First Name</mat-label>
+        <mat-label style="text-align: left">
+          {{ 'register-worker.FIRST_NAME' | translate }}
+        </mat-label>
         <mat-form-field>
-          <input matInput [(ngModel)]="user.firstName" type="text" placeholder="Enter your first name" class="input">
+          <input matInput [(ngModel)]="user.firstName" type="text"
+                 [placeholder]="'register-worker.FIRST_NAME_PLACEHOLDER' | translate" class="input">
         </mat-form-field>
 
-        <mat-label style="text-align: left">Last Name</mat-label>
+        <mat-label style="text-align: left">
+          {{ 'register-worker.LAST_NAME' | translate }}
+        </mat-label>
         <mat-form-field>
-          <input matInput [(ngModel)]="user.lastName" type="text" placeholder="Enter your last name" class="input">
+          <input matInput [(ngModel)]="user.lastName" type="text"
+                 [placeholder]="'register-worker.LAST_NAME_PLACEHOLDER' | translate" class="input">
         </mat-form-field>
 
-        <mat-label style="text-align: left">Date of Birth</mat-label>
+        <mat-label style="text-align: left">
+          {{ 'register-worker.BIRTH_DATE' | translate }}
+        </mat-label>
         <mat-form-field>
           <input matInput [(ngModel)]="user.birthDate" type="date" class="input">
         </mat-form-field>
 
-        <mat-label style="text-align: left">Phone</mat-label>
+        <mat-label style="text-align: left">
+          {{ 'register-worker.PHONE' | translate }}
+        </mat-label>
         <mat-form-field>
-          <input matInput [(ngModel)]="user.phoneNumber" type="tel" placeholder="Enter your phone number" class="input">
+          <input matInput [(ngModel)]="user.phoneNumber" type="tel"
+                 [placeholder]="'register-worker.PHONE_PLACEHOLDER' | translate" class="input">
         </mat-form-field>
 
-        <mat-label style="text-align: left">Email</mat-label>
+        <mat-label style="text-align: left">
+          {{ 'register-worker.EMAIL' | translate }}
+        </mat-label>
         <mat-form-field>
-          <input matInput [(ngModel)]="user.email" type="email" placeholder="Enter your email" class="input">
+          <input matInput [(ngModel)]="user.email" type="email"
+                 [placeholder]="'register-worker.EMAIL_PLACEHOLDER' | translate" class="input">
         </mat-form-field>
 
-        <mat-label style="text-align: left">Password</mat-label>
+        <mat-label style="text-align: left">
+          {{ 'register-worker.PASSWORD' | translate }}
+        </mat-label>
         <mat-form-field>
-          <input matInput [(ngModel)]="user.password" type="password" placeholder="Create a password" class="input">
+          <input matInput [(ngModel)]="user.password" type="password"
+                 [placeholder]="'register-worker.PASSWORD_PLACEHOLDER' | translate" class="input">
         </mat-form-field>
 
-        <button mat-button style="color: white; background-color: #FF7A00" type="submit" (click)="onSubmit()" routerLink="/validation">
-          Register as Worker
+        <button mat-button style="color: white; background-color: #FF7A00" type="submit"
+                (click)="onSubmit()" routerLink="/validation">
+          {{ 'register-worker.REGISTER_AS_WORKER' | translate }}
         </button>
 
       </div>

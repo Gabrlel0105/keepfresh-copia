@@ -9,7 +9,8 @@
     "HOME": "Inicio",
     "INVENTORY": "Inventario",
     "PROFILE": "Perfil",
-    "NOTIFICATIONS": "Notificaciones"
+    "NOTIFICATIONS": "Notificaciones",
+    "REPORT": "Reporte"
   },
   "login-owner": {
     "WORKER": "Trabajador",
@@ -56,6 +57,103 @@
     "CODE_LABEL": "Ingresa el código",
     "CODE_PLACEHOLDER": "Código",
     "RESET_BUTTON": "Restablecer contraseña"
+  },
+
+
+  "register-owner": {
+    "WORKER": "Trabajador",
+    "DUENO": "Dueño",
+    "REGISTER": "Registrar",
+    "FIRST_NAME": "Nombre",
+    "FIRST_NAME_PLACEHOLDER": "Ingrese su nombre",
+    "LAST_NAME": "Apellido",
+    "LAST_NAME_PLACEHOLDER": "Ingrese su apellido",
+    "BIRTH_DATE": "Fecha de nacimiento",
+    "PHONE": "Teléfono",
+    "PHONE_PLACEHOLDER": "Ingrese su número de teléfono",
+    "EMAIL": "Correo electrónico",
+    "EMAIL_PLACEHOLDER": "Ingrese su correo electrónico",
+    "PASSWORD": "Contraseña",
+    "PASSWORD_PLACEHOLDER": "Cree una contraseña",
+    "REGISTER_AS_DUENO": "Registrar como dueño"
+  },
+
+
+
+  "register-worker": {
+    "WORKER": "Trabajador",
+    "DUENO": "Dueño",
+    "REGISTER": "Registrar",
+    "FIRST_NAME": "Nombre",
+    "FIRST_NAME_PLACEHOLDER": "Ingrese su nombre",
+    "LAST_NAME": "Apellido",
+    "LAST_NAME_PLACEHOLDER": "Ingrese su apellido",
+    "BIRTH_DATE": "Fecha de nacimiento",
+    "PHONE": "Teléfono",
+    "PHONE_PLACEHOLDER": "Ingrese su número de teléfono",
+    "EMAIL": "Correo electrónico",
+    "EMAIL_PLACEHOLDER": "Ingrese su correo electrónico",
+    "PASSWORD": "Contraseña",
+    "PASSWORD_PLACEHOLDER": "Cree una contraseña",
+    "REGISTER_AS_WORKER": "Registrar como trabajador"
+  },
+
+
+  "inventory": {
+    "TITLE": "Inventario",
+    "ID": "ID",
+    "INVENTORY_ID": "ID de Inventario",
+    "NAME": "Nombre",
+    "EXPIRATION_DATE": "Fecha de vencimiento",
+    "STOCK": "Stock",
+    "MEASUREMENT_UNIT": "Unidad de medida",
+    "PRICE": "Precio",
+    "ADD_PRODUCT_TITLE": "Agregar un nuevo producto",
+    "ADD_PRODUCT_BUTTON": "Agregar producto"
+  },
+
+
+
+  "report": {
+    "ID": "ID",
+    "DATE": "Fecha",
+    "DETAILS": "Detalles",
+    "TITLE": "Título",
+    "ADD": "Agregar Reporte"
+  },
+
+
+
+  "dashboard": {
+    "PROFITS": "Ganancias del restaurante: Cantidad de pedidos vendidos por día.",
+    "LOSSES": "Pérdidas del restaurante: Total de productos comprados para el inventario.",
+    "ORDERS_BAR": "Cantidad de platos vendidos por día en una gráfica de barras.",
+    "ORDERS_PIE": "Cantidad de platos vendidos por día en una gráfica circular."
+  },
+
+  "orderForm": {
+    "TITLE": "Crear Nueva Orden",
+    "TABLE_NUMBER": "Número de Mesa",
+    "PLACEHOLDER_TABLE": "Ej: 5",
+    "ERROR_TABLE_REQUIRED": "El número de mesa es obligatorio.",
+    "ERROR_TABLE_MIN": "El número de mesa debe ser al menos 1.",
+    "DISH": "Plato",
+    "SELECT_DISH": "Seleccione un plato",
+    "ERROR_DISH_REQUIRED": "Debe seleccionar un plato.",
+    "QUANTITY": "Cantidad",
+    "ERROR_QUANTITY_REQUIRED": "La cantidad es obligatoria.",
+    "ERROR_QUANTITY_MIN": "Mínimo 1.",
+    "REMOVE": "Eliminar",
+    "ADD_DISH": "+ Agregar plato",
+    "TOTAL": "Total estimado:",
+    "SAVE_ORDER": "Guardar Orden"
+  },
+
+
+  "alerts": {
+    "TITLE": "Alertas",
+    "COLUMN_TITLE": "Título",
+    "COLUMN_DATE": "Fecha"
   }
 
 

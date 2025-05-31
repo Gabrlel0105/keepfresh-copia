@@ -23,6 +23,7 @@ import {TranslatePipe} from '@ngx-translate/core';
     TranslatePipe,
 
   ],
+  standalone: true,
   styleUrls: ['./recover-password-owner.component.css']
 })
 export class RecoverPasswordOwnerComponent {

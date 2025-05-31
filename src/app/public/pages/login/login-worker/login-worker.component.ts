@@ -24,6 +24,7 @@ import {TranslatePipe} from '@ngx-translate/core';
     MatAnchor,
     TranslatePipe
   ],
+  standalone: true,
   styleUrls: ['./login-worker.component.css']
 })
 export class LoginWorkerComponent {

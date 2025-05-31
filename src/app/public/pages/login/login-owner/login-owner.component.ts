@@ -25,6 +25,7 @@ import {TranslatePipe} from '@ngx-translate/core';
 
     MatAnchor
   ],
+  standalone: true,
   styleUrls: ['./login-owner.component.css']
 })
 export class LoginOwnerComponent {
