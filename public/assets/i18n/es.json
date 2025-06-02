@@ -10,7 +10,8 @@
     "INVENTORY": "Inventario",
     "PROFILE": "Perfil",
     "NOTIFICATIONS": "Notificaciones",
-    "REPORT": "Reporte"
+    "REPORT": "Reporte",
+    "DASHBOARD": "Dashboard"
   },
   "login-owner": {
     "WORKER": "Trabajador",
