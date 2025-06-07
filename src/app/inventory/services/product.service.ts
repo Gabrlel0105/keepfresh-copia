@@ -12,11 +12,11 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getProducts() {
-    return this.http.get<Product[]>(environment.serverBaseUrlProducts);
+    return this.http.get<Product[]>(environment.serverBaseUrl + environment.productsEndpointPath);
   }
 
   addProduct(product: Omit<Product, 'id'>): Observable<Product> {
-    return this.http.post<Product>(environment.serverBaseUrlProducts, product);
+    return this.http.post<Product>(environment.serverBaseUrl + environment.productsEndpointPath, product);
   }
 
   getTotalCostByWeekday(): Observable<{ [day: string]: number }> {

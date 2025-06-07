@@ -8,7 +8,7 @@ import { environment} from '../../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class reportService {
-  private apiUrl = 'http://localhost:3000/api/v1/reports';
+  private apiUrl = 'https://json-keep-production.up.railway.app/';
 
   constructor(private http: HttpClient) {}
 
