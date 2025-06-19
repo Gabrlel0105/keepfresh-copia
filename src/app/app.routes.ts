@@ -19,6 +19,9 @@ const NotificationsComponent = () => import('./notification/components/notificat
 
 import {SummaryCardsComponent} from './reports/components/summary-cards/summary-cards.component';
 
+import {SubscriptionPageComponent} from './subscription/pages/subscription-page/subscription-page.component';
+import {SubscribeSuccessComponent} from './subscription/pages/subscribe-success/subscribe-success.component';
+
 
 
 export const routes: Routes = [
@@ -35,6 +38,8 @@ export const routes: Routes = [
   {path: 'pages/recover-password-owner',loadComponent:RecoverPasswordOwnerComponent},
   {path: 'pages/restore-owner',component:RestoreOwnerComponent},
   {path: 'pages/restore-worker',component:RestoreWorkerComponent},
+  {path: 'pages/subscription', component: SubscriptionPageComponent},
+  {path: 'pages/subscription/success', component: SubscribeSuccessComponent},
   {path: 'pages/validation',component:ValidationComponent},
   {path : 'pages/report',component:SummaryCardsComponent},
   { path: '', redirectTo: 'pages/dashboard', pathMatch: 'full' },
